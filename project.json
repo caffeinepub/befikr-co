@@ -1,0 +1,26 @@
+{
+  "overview": "Befikr Co. is a premium Gen Z streetwear eCommerce brand website. Featuring a minimal luxury aesthetic inspired by Fear of God and Essentials, it delivers a full shopping experience with 6 pages, a working cart, product filters, and smooth animations — all in black, off-white, and grey tones.",
+  "features": [
+    "Fullscreen hero with 'Stay Befikr.' headline and Shop Now CTA",
+    "Shop page with product grid, category/size/price filters, and hover image swap",
+    "Product detail page with gallery, size selector, and Add to Cart",
+    "Working cart with localStorage persistence, quantity adjusters, and order summary",
+    "About page with minimalist brand story typography",
+    "Contact page with validated form and social links",
+    "Sticky responsive navbar with mobile hamburger menu and cart badge",
+    "Scroll-triggered fade-in and slide-up animations throughout",
+    "20+ mock products across T-shirts, Hoodies, and Drops categories"
+  ],
+  "category": "ecommerce",
+  "tags": [
+    "streetwear",
+    "fashion",
+    "ecommerce",
+    "minimal",
+    "luxury",
+    "gen-z",
+    "react",
+    "tailwind"
+  ],
+  "last_updated": "2026-04-08T15:38:08.600Z"
+}
