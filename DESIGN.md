@@ -1,60 +1,66 @@
-# Design Brief: Befikr Co. — Premium Luxury Streetwear
+# Design Brief: Befikr Co. — Gen Z Anime Neon Money Mindset
 
-**Tone & Direction:** Brutalist minimalism. Silence as luxury. Pure monochrome (black, off-white, charcoal) with zero accent color. Typography-led hierarchy, generous breathing room, no decoration.
+**Tone & Direction:** Professional Gen Z anime-inspired cyberpunk aesthetic. Black base with vibrant neon accents (lime, electric pink, cyan, orange). Bold Space Grotesk typography, spacious layouts with 100vh hero, energetic glowing animations with glitch effects. Premium wealth taglines ("Get the bag", "Stack it", "Level up"). Every element has intentional glow and geometric precision.
 
-**Differentiation:** Every streetwear brand reaches for accent colors. Befikr Co. rejects them entirely. Form, typography, and space alone convey premium quality and confidence. This looks *more* expensive, not cheaper.
+**Differentiation:** Befikr channels anime energy meets money mindset — vibrant, energetic, unapologetically bold. Glowing shadows, glitch text effects, neon color blocking, and spacious breathing room create a premium Gen Z streetwear experience that stands apart.
 
 ## Palette
 
-| Token | Light | Dark | Purpose |
-|-------|-------|------|---------|
-| `background` | 0.98 0 0 | 0.12 0 0 | Page background, breathing room |
-| `foreground` | 0.15 0 0 | 0.96 0 0 | Body text, primary content |
-| `primary` | 0.15 0 0 | 0.96 0 0 | Buttons, CTAs, active states |
-| `secondary` | 0.4 0 0 | 0.35 0 0 | Secondary actions, disabled states |
-| `muted` | 0.88 0 0 | 0.25 0 0 | Subtle backgrounds, borders, accents |
-| `card` | 0.99 0 0 | 0.15 0 0 | Product cards, lifted surfaces |
-| `border` | 0.92 0 0 | 0.22 0 0 | Borders, dividers, structural lines |
+| Token | OKLCH | Hex | Purpose |
+|-------|-------|-----|---------|
+| `background` | 0.05 0 0 | #000000 | Pure black base, anime backdrop |
+| `foreground` | 0.98 0.01 275 | #FEFFFE | Off-white, crisp text |
+| `primary` | 0.82 0.22 110 | #CCFF00 | Neon lime, energetic CTAs |
+| `secondary` | 0.62 0.26 349 | #FF006B | Electric pink, alt actions |
+| `accent` | 0.65 0.22 210 | #00D9FF | Cyan, highlights & badges |
+| `muted` | 0.15 0.01 0 | #1A1A1A | Deep charcoal, subtle UI |
+| `destructive` | 0.55 0.26 20 | #FF5733 | Warning state, anime-style red |
+| `border` | 0.12 0.01 0 | #0D0D0D | Minimal borders, dark theme |
 
 ## Typography
 
 | Role | Font | Size | Weight | Line-Height | Usage |
 |------|------|------|--------|-------------|-------|
-| Display | Fraunces serif | 2.5–3.5rem | 700 | 1.2 | Hero headlines, page titles, editorial |
-| Body | DM Sans | 1rem | 400–500 | 1.6–1.8 | All body text, descriptions |
-| Label | DM Sans | 0.875rem | 600 | 1.5 | Form labels, meta, small caps |
+| Display | Bricolage Grotesque | 2.5–4rem | 700 | 1.1 | Hero, headlines, money taglines |
+| Body | DM Sans | 1rem | 400–500 | 1.6 | Body text, descriptions |
+| Label | DM Sans | 0.875rem | 600 | 1.5 | Badges, labels, meta |
 
 ## Structural Zones
 
 | Zone | Treatment | Rationale |
 |------|-----------|-----------|
-| Header/Nav | Sticky, charcoal (L=0.15) with off-white text; minimal border-b | Anchors navigation, maintains hierarchy |
-| Hero | Full-width, off-white background, centered Fraunces headline, subtle shadow base | Dramatic entry point, typography focus |
-| Product Grid | 3–4 cols on desktop, 2 on tablet, 1 mobile. Cards: white bg, no shadow until hover | Clean, breathable product display |
-| Footer | Dark charcoal (L=0.12), off-white text, minimal typography | Grounds page, closes visual narrative |
+| Hero | 100vh, black bg, lime gradient text, glitch animation, centered Bricolage headline + tagline | Dramatic, full-height anime entry with glowing effect |
+| Navbar | Sticky, black with minimal cyan/lime border-b, glowing navbar text on hover | Anchors navigation, neon accent guides eye |
+| Product Grid | 3–4 cols desktop, 2 tablet, 1 mobile. Cards: dark (L=0.08) bg, lime border-t accent, hover glow-lime shadow | Clean grid with neon accents, breathing room |
+| CTA Buttons | Lime bg (primary), black text, rounded-md, glow-lime shadow, hover: pulse-glow animation | Energetic, impossible-to-miss action buttons |
+| Footer | Black bg (L=0.05), off-white text, cyan accent dividers, glowing social icons | Grounds page, neon accents reinforce brand |
 
 ## Component Patterns
 
-- **Buttons**: Black (`bg-primary`) with off-white text. On hover: scale 1.02x, `shadow-subtle`. No rounded corners (radius: 0.25rem = minimal).
-- **Product Cards**: Off-white bg, charcoal border (1px), image full-bleed, price in label weight, no badges.
-- **Inputs**: Light grey bg (L=0.95), charcoal border, no shadow focus. Focus ring: black.
-- **Hover States**: Scale 1.02x + `shadow-subtle` on cards. Text opacity 0.8 on secondary actions.
+- **Buttons**: Lime bg with primary text, rounded-md, box-shadow glow-lime on default. Hover: pulse-glow animation + scale 1.05x. Transition: transition-glow 0.4s.
+- **Product Cards**: Dark card bg, lime border-t (2px), image full-bleed, pink price badge, lime accent borders. Hover: glow-lime shadow, scale 1.02x.
+- **Badge/Pills**: Pink bg with black text for category, lime for "new", cyan for highlights. Glow effect on hover.
+- **Inputs**: Input bg (L=0.1), lime ring on focus. Text: off-white. Placeholder: muted-foreground.
+- **Hover States**: Scale 1.02–1.05x + shadow glow (lime/cyan/pink per context). Transition: 0.3s cubic-bezier.
 
 ## Motion & Animation
 
-- **Fade-in**: 0.6s ease-out on page load and scroll-triggered elements (delay staggered per section).
-- **Slide-up**: 12px + fade-in for product cards on scroll entry.
-- **Hover transitions**: All 0.3s cubic-bezier(0.4, 0, 0.2, 1). No bounce or elastic effects.
-- **Scroll behavior**: Smooth, no parallax distraction.
+- **Hero Glitch**: Text animates with 2–3px offset shifts on page load (glitch animation 0.4s).
+- **Pulse-Glow**: Buttons pulse with lime glow on hover (2s infinite), energetic but smooth.
+- **Bounce-Neon**: Subtle 8px bounce on interactive elements (1s infinite), anime-style energy.
+- **Glow Shadows**: All interactive elements cast colored shadows (lime/pink/cyan) on hover. Smooth 0.4s transition.
+- **Fade-in & Slide-up**: Cards enter with fade + 12px slide-up (0.6s staggered per section).
+- **Scroll Behavior**: Smooth scrolling, no parallax distraction. Animations trigger on scroll entry.
 
-## Constraints & Anti-Patterns
+## Accessibility & Contrast
 
-- **No accent color** — all interactive states use black or grey.
-- **No color badges** — category labels use typography weight only.
-- **No gradient overlays** — pure solid backgrounds.
-- **No badge borders** — minimal UI noise.
-- **Fixed typography weights** — 400 (body), 500 (meta), 600 (label), 700 (display). No 300 or 800.
+- Lime on black: WCAG AAA (L diff 0.77, C diff 0.21).
+- Pink on black: WCAG AAA (L diff 0.57, C diff 0.25).
+- Cyan on black: WCAG AAA (L diff 0.6, C diff 0.21).
+- Off-white on black: WCAG AAA (L diff 0.93).
+- All buttons maintain min 44px touch target with adequate padding.
 
 ## Signature Detail
 
-**Silence.** The absence of color is the brand signal. Every action is clear via form, weight, and proximity — not via color coding. This is the luxury of restraint. Competitors use five colors. Befikr uses two.
+**Glow is the UI language.** Every interactive element radiates neon energy via glowing shadows, glitch micro-interactions, and smooth animations. The anime-inspired aesthetic meets premium Gen Z money mindset — bold, energetic, unapologetically stylish.
+
